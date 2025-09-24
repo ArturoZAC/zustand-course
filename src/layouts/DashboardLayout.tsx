@@ -24,9 +24,7 @@ export const DashboardLayout = () => {
         <div className="w-full p-4">
           <Outlet />
         </div>
-
       </div>
-
     </div>
   );
 };

@@ -6,7 +6,7 @@ export interface User {
   roles: string[];
 }
 
-export type AuthStatus = 'authorized' | 'unauthorized' | 'pending';
+export type AuthStatus = "authorized" | "unauthorized" | "pending";
 
 export interface LoginResponse extends User {
   token: string;

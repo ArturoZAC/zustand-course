@@ -1,57 +1,60 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter } from "react-router-dom";
 
-import { Root } from '../Root';
-import { AuthLayout, DashboardLayout } from '../layouts';
-import { BearPage, Dashboard, JiraPage, LoginPage, PersonPage, WeddingInvitationPage } from '../pages';
+import { Root } from "../Root";
+import { AuthLayout, DashboardLayout } from "../layouts";
+import {
+  BearPage,
+  Dashboard,
+  JiraPage,
+  LoginPage,
+  PersonPage,
+  WeddingInvitationPage,
+} from "../pages";
 
-
-export const router = createBrowserRouter( [
+export const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Root />,
     children: [
       /// Dashboard Routes
       {
-        path: 'dashboard',
+        path: "dashboard",
         element: <DashboardLayout />,
         children: [
           {
-            path: '',
-            element: <Dashboard />
+            path: "",
+            element: <Dashboard />,
           },
           {
-            path: 'bears',
-            element: <BearPage />
+            path: "bears",
+            element: <BearPage />,
           },
           {
-            path: 'person',
-            element: <PersonPage />
+            path: "person",
+            element: <PersonPage />,
           },
           {
-            path: 'tasks',
-            element: <JiraPage />
+            path: "tasks",
+            element: <JiraPage />,
           },
           {
-            path: 'wedding-invitation',
-            element: <WeddingInvitationPage />
-          }
-
-        ]
+            path: "wedding-invitation",
+            element: <WeddingInvitationPage />,
+          },
+        ],
       },
 
       /// Auth Routes
       {
-        path: 'auth',
+        path: "auth",
         element: <AuthLayout />,
         children: [
           {
-            path: 'login',
-            element: <LoginPage />
-          }
-        ]
-
+            path: "login",
+            element: <LoginPage />,
+          },
+        ],
       },
-
     ],
   },
-] );
+]);
